@@ -20,12 +20,12 @@
 		AADEEE0A1B97E45100A20B38 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AADEEE091B97E45100A20B38 /* DetailViewController.m */; };
 		AAE15ADD1BAB9AEB00CF4C80 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE15ADC1BAB9AEB00CF4C80 /* DBManager.m */; };
 		AAE254A91B96BFC70039B405 /* TeamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE254A81B96BFC70039B405 /* TeamTableViewCell.m */; };
-		AAEAC8141BB1156A00EC10BA /* 루니.png in Resources */ = {isa = PBXBuildFile; fileRef = AAEAC80B1BB1156A00EC10BA /* 루니.png */; settings = {ASSET_TAGS = (); }; };
-		AAEAC8151BB1156A00EC10BA /* 메시.png in Resources */ = {isa = PBXBuildFile; fileRef = AAEAC80C1BB1156A00EC10BA /* 메시.png */; settings = {ASSET_TAGS = (); }; };
-		AAEAC8161BB1156A00EC10BA /* 실바.png in Resources */ = {isa = PBXBuildFile; fileRef = AAEAC80D1BB1156A00EC10BA /* 실바.png */; settings = {ASSET_TAGS = (); }; };
-		AAEAC8171BB1156A00EC10BA /* 아자르.png in Resources */ = {isa = PBXBuildFile; fileRef = AAEAC80E1BB1156A00EC10BA /* 아자르.png */; settings = {ASSET_TAGS = (); }; };
-		AAEAC8181BB1156A00EC10BA /* 외질.png in Resources */ = {isa = PBXBuildFile; fileRef = AAEAC80F1BB1156A00EC10BA /* 외질.png */; settings = {ASSET_TAGS = (); }; };
-		AAEAC8191BB1156A00EC10BA /* 호날두.png in Resources */ = {isa = PBXBuildFile; fileRef = AAEAC8101BB1156A00EC10BA /* 호날두.png */; settings = {ASSET_TAGS = (); }; };
+		AAEAC8141BB1156A00EC10BA /* wayne_rooney.png in Resources */ = {isa = PBXBuildFile; fileRef = AAEAC80B1BB1156A00EC10BA /* wayne_rooney.png */; settings = {ASSET_TAGS = (); }; };
+		AAEAC8151BB1156A00EC10BA /* lionel_messi.png in Resources */ = {isa = PBXBuildFile; fileRef = AAEAC80C1BB1156A00EC10BA /* lionel_messi.png */; settings = {ASSET_TAGS = (); }; };
+		AAEAC8161BB1156A00EC10BA /* david_silva.png in Resources */ = {isa = PBXBuildFile; fileRef = AAEAC80D1BB1156A00EC10BA /* david_silva.png */; settings = {ASSET_TAGS = (); }; };
+		AAEAC8171BB1156A00EC10BA /* eden_hazard.png in Resources */ = {isa = PBXBuildFile; fileRef = AAEAC80E1BB1156A00EC10BA /* eden_hazard.png */; settings = {ASSET_TAGS = (); }; };
+		AAEAC8181BB1156A00EC10BA /* mesut_ozil.png in Resources */ = {isa = PBXBuildFile; fileRef = AAEAC80F1BB1156A00EC10BA /* mesut_ozil.png */; settings = {ASSET_TAGS = (); }; };
+		AAEAC8191BB1156A00EC10BA /* cristiano_ronaldo.png in Resources */ = {isa = PBXBuildFile; fileRef = AAEAC8101BB1156A00EC10BA /* cristiano_ronaldo.png */; settings = {ASSET_TAGS = (); }; };
 		AAEAC81A1BB1156A00EC10BA /* iv_chealsea.png in Resources */ = {isa = PBXBuildFile; fileRef = AAEAC8111BB1156A00EC10BA /* iv_chealsea.png */; settings = {ASSET_TAGS = (); }; };
 		AAEAC81B1BB1156A00EC10BA /* iv_fc_barcelona.png in Resources */ = {isa = PBXBuildFile; fileRef = AAEAC8121BB1156A00EC10BA /* iv_fc_barcelona.png */; settings = {ASSET_TAGS = (); }; };
 		AAEAC81C1BB1156A00EC10BA /* iv_manchester_united.png in Resources */ = {isa = PBXBuildFile; fileRef = AAEAC8131BB1156A00EC10BA /* iv_manchester_united.png */; settings = {ASSET_TAGS = (); }; };
@@ -67,12 +67,12 @@
 		AAE15ADC1BAB9AEB00CF4C80 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
 		AAE254A71B96BFC70039B405 /* TeamTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamTableViewCell.h; sourceTree = "<group>"; };
 		AAE254A81B96BFC70039B405 /* TeamTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamTableViewCell.m; sourceTree = "<group>"; };
-		AAEAC80B1BB1156A00EC10BA /* 루니.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "루니.png"; path = "images/루니.png"; sourceTree = "<group>"; };
-		AAEAC80C1BB1156A00EC10BA /* 메시.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "메시.png"; path = "images/메시.png"; sourceTree = "<group>"; };
-		AAEAC80D1BB1156A00EC10BA /* 실바.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "실바.png"; path = "images/실바.png"; sourceTree = "<group>"; };
-		AAEAC80E1BB1156A00EC10BA /* 아자르.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "아자르.png"; path = "images/아자르.png"; sourceTree = "<group>"; };
-		AAEAC80F1BB1156A00EC10BA /* 외질.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "외질.png"; path = "images/외질.png"; sourceTree = "<group>"; };
-		AAEAC8101BB1156A00EC10BA /* 호날두.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "호날두.png"; path = "images/호날두.png"; sourceTree = "<group>"; };
+		AAEAC80B1BB1156A00EC10BA /* wayne_rooney.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wayne_rooney.png; path = images/wayne_rooney.png; sourceTree = "<group>"; };
+		AAEAC80C1BB1156A00EC10BA /* lionel_messi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lionel_messi.png; path = images/lionel_messi.png; sourceTree = "<group>"; };
+		AAEAC80D1BB1156A00EC10BA /* david_silva.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = david_silva.png; path = images/david_silva.png; sourceTree = "<group>"; };
+		AAEAC80E1BB1156A00EC10BA /* eden_hazard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = eden_hazard.png; path = images/eden_hazard.png; sourceTree = "<group>"; };
+		AAEAC80F1BB1156A00EC10BA /* mesut_ozil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mesut_ozil.png; path = images/mesut_ozil.png; sourceTree = "<group>"; };
+		AAEAC8101BB1156A00EC10BA /* cristiano_ronaldo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cristiano_ronaldo.png; path = images/cristiano_ronaldo.png; sourceTree = "<group>"; };
 		AAEAC8111BB1156A00EC10BA /* iv_chealsea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iv_chealsea.png; path = images/iv_chealsea.png; sourceTree = "<group>"; };
 		AAEAC8121BB1156A00EC10BA /* iv_fc_barcelona.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iv_fc_barcelona.png; path = images/iv_fc_barcelona.png; sourceTree = "<group>"; };
 		AAEAC8131BB1156A00EC10BA /* iv_manchester_united.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iv_manchester_united.png; path = images/iv_manchester_united.png; sourceTree = "<group>"; };
@@ -207,12 +207,12 @@
 		AAEAC80A1BB1155500EC10BA /* images */ = {
 			isa = PBXGroup;
 			children = (
-				AAEAC80B1BB1156A00EC10BA /* 루니.png */,
-				AAEAC80C1BB1156A00EC10BA /* 메시.png */,
-				AAEAC80D1BB1156A00EC10BA /* 실바.png */,
-				AAEAC80E1BB1156A00EC10BA /* 아자르.png */,
-				AAEAC80F1BB1156A00EC10BA /* 외질.png */,
-				AAEAC8101BB1156A00EC10BA /* 호날두.png */,
+				AAEAC80B1BB1156A00EC10BA /* wayne_rooney.png */,
+				AAEAC80C1BB1156A00EC10BA /* lionel_messi.png */,
+				AAEAC80D1BB1156A00EC10BA /* david_silva.png */,
+				AAEAC80E1BB1156A00EC10BA /* eden_hazard.png */,
+				AAEAC80F1BB1156A00EC10BA /* mesut_ozil.png */,
+				AAEAC8101BB1156A00EC10BA /* cristiano_ronaldo.png */,
 				AAEAC8111BB1156A00EC10BA /* iv_chealsea.png */,
 				AAEAC8121BB1156A00EC10BA /* iv_fc_barcelona.png */,
 				AAEAC8131BB1156A00EC10BA /* iv_manchester_united.png */,
@@ -264,7 +264,7 @@
 		AA9EDB711B9029040050E1C8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = udong;
 				TargetAttributes = {
 					AA9EDB781B9029040050E1C8 = {
@@ -301,15 +301,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA9EDB881B9029040050E1C8 /* Main.storyboard in Resources */,
-				AAEAC8141BB1156A00EC10BA /* 루니.png in Resources */,
-				AAEAC8151BB1156A00EC10BA /* 메시.png in Resources */,
-				AAEAC8181BB1156A00EC10BA /* 외질.png in Resources */,
+				AAEAC8141BB1156A00EC10BA /* wayne_rooney.png in Resources */,
+				AAEAC8151BB1156A00EC10BA /* lionel_messi.png in Resources */,
+				AAEAC8181BB1156A00EC10BA /* mesut_ozil.png in Resources */,
 				AAEAC81A1BB1156A00EC10BA /* iv_chealsea.png in Resources */,
-				AAEAC8191BB1156A00EC10BA /* 호날두.png in Resources */,
-				AAEAC8161BB1156A00EC10BA /* 실바.png in Resources */,
+				AAEAC8191BB1156A00EC10BA /* cristiano_ronaldo.png in Resources */,
+				AAEAC8161BB1156A00EC10BA /* david_silva.png in Resources */,
 				AAEAC81C1BB1156A00EC10BA /* iv_manchester_united.png in Resources */,
 				AA9EDB8D1B9029040050E1C8 /* LaunchScreen.xib in Resources */,
-				AAEAC8171BB1156A00EC10BA /* 아자르.png in Resources */,
+				AAEAC8171BB1156A00EC10BA /* eden_hazard.png in Resources */,
 				AA9EDB8A1B9029040050E1C8 /* Images.xcassets in Resources */,
 				AAEAC81B1BB1156A00EC10BA /* iv_fc_barcelona.png in Resources */,
 			);
@@ -400,6 +400,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -469,6 +470,7 @@
 				INFOPLIST_FILE = iosTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "udong.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -481,6 +483,7 @@
 				INFOPLIST_FILE = iosTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "udong.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -499,6 +502,7 @@
 				);
 				INFOPLIST_FILE = iosTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "udong.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iosTest.app/iosTest";
 			};
@@ -514,6 +518,7 @@
 				);
 				INFOPLIST_FILE = iosTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "udong.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iosTest.app/iosTest";
 			};

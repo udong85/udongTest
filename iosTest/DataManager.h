@@ -21,6 +21,7 @@
 //-(NSMutableArray *)getPlayerListData;
 
 -(void)dataInit;
+-(void)modifyPlayerInfo:(NSMutableArray *)playerInfo;
 
 @property (nonatomic, retain) NSMutableArray *teamListData;
 @property (nonatomic, retain) NSMutableArray *playerData;

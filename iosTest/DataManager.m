@@ -72,7 +72,7 @@ static DataManager *mDataManager;
                                                             @[@"P012", @"T005", @"콤파니", @"DF", @"", @"벨기에 수비수. 그가 있어 뒤가 든든하다. 안정적이면서도 세트피스에서는 골을 만들어낸다."],
                                                             @[@"P013", @"T003", @"데 헤아", @"GK", @"", @"맨유의 수문장. 긴팔에 동물적 감각으로 골문을 지킨다. 이번시즌 맨유와 불화설이 있어 떠날줄 알았는데, 남았다."],
                                                             @[@"P014", @"T005", @"야야 투레", @"MF", @"", @"엄청난 피지컬에도 무서운 파괴력이 있는 선수. 그가 공을 잡으면 왠지 안정적이다. 팀이 어려울때 한방이 있는 선수"],
-                                                            @[@"P015", @"T005", @"라임 스털링", @"FW", @"", @"어린놈이 패기가 남다르다. 잘하긴하는데 멘탈은 아직 미성숙. 리버풀에 있을때 3S 시절 기대했었는데, 이미 머 다 무너졌으니... 맨유에서서 얼마나 잘 할지는 지켜봐야 할듯. 아직까지는 잘 되고 있다."],
+                                                            @[@"P015", @"T005", @"라임 스털링", @"FW", @"", @"어린놈이 패기가 남다르다. 잘하긴하는데 멘탈은 아직 미성숙. 리버풀에 있을때 3S 시절 기대했었는데, 이미 머 다 무너졌으니... 맨시티에서서 얼마나 잘 할지는 지켜봐야 할듯. 아직까지는 잘 되고 있다."],
                                                             @[@"P016", @"T005", @"나스리", @"MF", @"", @"아스날 시절 기대되는 선수였지만, 요즘들어서 큰 인상을 주지 못하는 선수. 그래도 가끔씩 조커로 기용된다."],
                                                             @[@"P017", @"T005", @"아게로", @"FW", @"", @"아르헨티나 간판 공격수. 지난시즌 프리미어리그 득점왕. 역시 한방이 있는 선수"],
                                                             @[@"P018", @"T005", @"에딘 제코", @"FW", @"", @"기대를 안고 맨시티에 입단하였지만 큰 성과는 잘 모르겠다. 한때 먹튀 논란이 있던 선수. 하지만 지금은 적응이후 올라오는 선수"],
@@ -82,6 +82,28 @@ static DataManager *mDataManager;
     }
 }
 
+-(void)modifyPlayerInfo:(NSMutableArray *)playerInfo
+{
+    NSString *playerCode = [playerInfo objectAtIndex:3];
+    
+    for(int i=0; i < [self.playerData count] ; i++)
+    {
+        NSMutableArray *playerData = [[NSMutableArray alloc] initWithArray:[self.playerData objectAtIndex:i]];
 
+        if([playerCode isEqual:[playerData objectAtIndex:0]]){
+            [playerData replaceObjectAtIndex:2 withObject:(NSString *)[playerInfo objectAtIndex:0]];
+            [playerData replaceObjectAtIndex:3 withObject:[playerInfo objectAtIndex:1]];
+            [playerData replaceObjectAtIndex:5 withObject:[playerInfo objectAtIndex:2]];
+
+            [self.playerData replaceObjectAtIndex:i withObject:playerData];
+            
+            [playerData release];
+            
+            return;
+        }
+        
+        [playerData release];
+    }
+}
 
 @end

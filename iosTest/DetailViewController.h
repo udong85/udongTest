@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "Base.h"
 #import "DataManager.h"
+#import "DBManager.h"
 #import "PlayerTableViewCell.h"
 
-@interface DetailViewController : Base <UITableViewDataSource, UITableViewDelegate>
+@interface DetailViewController : Base <UITableViewDataSource, UITableViewDelegate, UITextViewDelegate, UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
     
 }

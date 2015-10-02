@@ -14,5 +14,5 @@
 
 +(DBManager *)getInstance;
 -(void)connectDataBase;
-
+-(NSInteger)modifyPlayerInfo:(NSMutableArray *)playerInfo;
 @end

@@ -54,8 +54,8 @@ static DBManager *mDBManager;
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
     
-//    if([fileManager fileExistsAtPath: self.databasePath] == NO)
-//    {
+    if([fileManager fileExistsAtPath: self.databasePath] == NO)
+    {
         if(sqlite3_open([self.databasePath UTF8String], &_dataBaseManager) == SQLITE_OK)    // DB 를 열면서 없으면 생성
         {
             NSLog(@"DB open success!");
@@ -66,9 +66,10 @@ static DBManager *mDBManager;
             NSLog(@"sqlite DB open error. DB will be closed");
             sqlite3_close(_dataBaseManager);
         }
-//    }else{
-//        [self initSoccerDataIntoDataManager];
-//    }
+    }else{
+        NSLog(@"no drop table");
+        [self initSoccerDataIntoDataManager];
+    }
 }
 
 -(void)dropTable
@@ -154,7 +155,7 @@ static DBManager *mDBManager;
                 sqlite3_bind_text(statement, 2, [[teamData objectAtIndex:1] UTF8String], -1, SQLITE_TRANSIENT);
                 sqlite3_bind_text(statement, 3, [[teamData objectAtIndex:2] UTF8String], -1, SQLITE_TRANSIENT);
                 sqlite3_bind_text(statement, 4, [[teamData objectAtIndex:3] UTF8String], -1, SQLITE_TRANSIENT);
-                NSLog(@"teamData %@", [teamData objectAtIndex:3]);
+
                 if(sqlite3_step(statement) != SQLITE_DONE){
 //                    NSLog(@"INSERT TEAM table DATA fail. [ERROR CODE] : %d, [ERROR MESSAGE] : %s", sqlite3_errcode(self.dataBaseManager), sqlite3_errmsg(self.dataBaseManager));
 //                    sqlite3_finalize(statement);
@@ -177,17 +178,17 @@ static DBManager *mDBManager;
         if(sqlite3_prepare_v2(self.dataBaseManager, sql,  -1, &statement, NULL) == SQLITE_OK){
             
             NSMutableArray *playerDataList = [NSMutableArray arrayWithArray:@[     // 선수 코드, 소속팀 코드, 선수명, 포지션, 이미지 주소, 상세 설명
-                                                                       @[@"P001", @"T001", @"크리스티아누 호날두", @"FW", @"호날두.png", @"현역 선수중 메시와 신계 선수. 몸이 좋다!! 패션 센스는 꽝."],
-                                                                       @[@"P002", @"T002", @"리오넬 메시", @"FW", @"메시.png", @"현존 사기 캐릭"],
+                                                                       @[@"P001", @"T001", @"크리스티아누 호날두", @"FW", @"cristiano_ronaldo.png", @"현역 선수중 메시와 신계 선수. 몸이 좋다!! 패션 센스는 꽝."],
+                                                                       @[@"P002", @"T002", @"리오넬 메시", @"FW", @"lionel_messi.png", @"현존 사기 캐릭"],
                                                                        @[@"P003", @"T002", @"수아레즈", @"FW", @"", @"성격은 지랄맞지만 잘하긴 잘한다. 못생김"],
                                                                        @[@"P004", @"T006", @"오스카", @"MF", @"", @"잘하는거 같은데 피지컬이 약해서... 왠지 먼가 아쉽다."],
-                                                                       @[@"P005", @"T006", @"에당 아자르", @"MF", @"아자르.png", @"벨기에 에이스!!! 요즘 꽃이 핀다. 좀 더 올라온다면 인간계 최강자가 될수도."],
+                                                                       @[@"P005", @"T006", @"에당 아자르", @"MF", @"eden_hazard.png", @"벨기에 에이스!!! 요즘 꽃이 핀다. 좀 더 올라온다면 인간계 최강자가 될수도."],
                                                                        @[@"P006", @"T001", @"가레스 베일", @"FW", @"", @"한때 인간계 최강자로 꼽혔지만, 요즘은 잘 모르겠다. 레알마드리드 간판 공격수 BBC 중에 하나지만 평타정도인듯"],
                                                                        @[@"P007", @"T002", @"네이마르", @"FW", @"", @"바로셀로나 간판 공격수. 빠르고 드리블이 좋지만, 먼가 저돌적이다. 추후에 큰 부상으로 선수 생활 끝날꺼 같은 느낌이다."],
-                                                                       @[@"P008", @"T003", @"루니", @"FW", @"루니.png", @"원래는 공격수였으나 요즘은 공격형 미들필더, 쉐도우 스트라이커까지 다방면에서 훌륭한 선수다. 맨유하면 루니!! 루니하면 맨유!!"],
-                                                                       @[@"P009", @"T004", @"메수트 외질", @"MF", @"외질.png", @"독일의 특급 미들필더. 공을 아름답게 찬다는 말이 어울리는 선수. 유연하고 정확한 패스로 경기를 이끌어간다. 이런 미들필더 한명이면 축구가 재미있어지고 쉬워진다."],
+                                                                       @[@"P008", @"T003", @"루니", @"FW", @"wayne_rooney.png", @"원래는 공격수였으나 요즘은 공격형 미들필더, 쉐도우 스트라이커까지 다방면에서 훌륭한 선수다. 맨유하면 루니!! 루니하면 맨유!!"],
+                                                                       @[@"P009", @"T004", @"메수트 외질", @"MF", @"mesut_ozil.png", @"독일의 특급 미들필더. 공을 아름답게 찬다는 말이 어울리는 선수. 유연하고 정확한 패스로 경기를 이끌어간다. 이런 미들필더 한명이면 축구가 재미있어지고 쉬워진다."],
                                                                        @[@"P010", @"T004", @"올리비아 지루", @"FW", @"", @"아스날 원톱 공격수. 전형적으로 뱅거가 좋아하는 스타일. 결정력 있는 공격수. 미들필더에서 만들어주면 어떻게해서든 골을 넣게 만드는 선수를 원하는 뱅거스타일. 딱히 공을 만들어서 골을 만들지는 않지만 찬스가 왔을때 놓치지 않는다. 다만 사생활이 더럽다. 스캔들이 끊이지 않음"],
-                                                                       @[@"P011", @"T005", @"다비드 실바", @"MF", @"실바.png", @"맨체스터 시티를 이끌어가는 미들필드. 중원의 사령관. 에이스는 이래야 된다는 걸 보여준다. 많은 활동량으로 동료들에게 기회를 만들어주면서도 자신이 골을 넣기도 한다."],
+                                                                       @[@"P011", @"T005", @"다비드 실바", @"MF", @"david_silva.png", @"맨체스터 시티를 이끌어가는 미들필드. 중원의 사령관. 에이스는 이래야 된다는 걸 보여준다. 많은 활동량으로 동료들에게 기회를 만들어주면서도 자신이 골을 넣기도 한다."],
                                                                        @[@"P012", @"T005", @"콤파니", @"DF", @"", @"벨기에 수비수. 그가 있어 뒤가 든든하다. 안정적이면서도 세트피스에서는 골을 만들어낸다."],
                                                                        @[@"P013", @"T003", @"데 헤아", @"GK", @"", @"맨유의 수문장. 긴팔에 동물적 감각으로 골문을 지킨다. 이번시즌 맨유와 불화설이 있어 떠날줄 알았는데, 남았다."],
                                                                        @[@"P014", @"T005", @"야야 투레", @"MF", @"", @"엄청난 피지컬에도 무서운 파괴력이 있는 선수. 그가 공을 잡으면 왠지 안정적이다. 팀이 어려울때 한방이 있는 선수"],
@@ -242,7 +243,7 @@ static DBManager *mDBManager;
         {
             NSMutableArray *teamDataList = [[NSMutableArray alloc] init];
             while(sqlite3_step(statement) == SQLITE_ROW){
-                NSLog(@"while loop... ");
+
                 [teamDataList addObject: @[[NSString stringWithUTF8String:(char *) sqlite3_column_text(statement, 0)],
                                           [NSString stringWithUTF8String:(char *) sqlite3_column_text(statement, 1)],
                                           [NSString stringWithUTF8String:(char *) sqlite3_column_text(statement, 2)],
@@ -251,7 +252,7 @@ static DBManager *mDBManager;
             }
             
             [[DataManager getInstance] setTeamListData:teamDataList];
-            NSLog(@"team Data count : %lu", [teamDataList count]);
+            
             [teamDataList release];
         }else{
             NSLog(@"SELECT TEAM table fail. [ERROR CODE] : %d, [ERROR MESSAGE] : %s", sqlite3_errcode(self.dataBaseManager), sqlite3_errmsg(self.dataBaseManager));
@@ -266,7 +267,7 @@ static DBManager *mDBManager;
         {
             NSMutableArray *playerDataList = [[NSMutableArray alloc] init];
             while(sqlite3_step(statement) == SQLITE_ROW){
-                NSLog(@"while loop...");
+
                 [playerDataList addObject: @[[NSString stringWithUTF8String:(char *) sqlite3_column_text(statement, 0)],
                                            [NSString stringWithUTF8String:(char *) sqlite3_column_text(statement, 1)],
                                            [NSString stringWithUTF8String:(char *) sqlite3_column_text(statement, 2)],
@@ -277,7 +278,7 @@ static DBManager *mDBManager;
             }
             
             [[DataManager getInstance] setPlayerData:playerDataList];
-            NSLog(@"player Data count : %lu", [playerDataList count]);
+
             [playerDataList release];
         }else{
             NSLog(@"SELECT PLAYER table fail. [ERROR CODE] : %d, [ERROR MESSAGE] : %s", sqlite3_errcode(self.dataBaseManager), sqlite3_errmsg(self.dataBaseManager));
@@ -285,6 +286,39 @@ static DBManager *mDBManager;
         
         sqlite3_finalize(statement);
     }
+}
+
+-(NSInteger)modifyPlayerInfo:playerInfo
+{
+    NSLog(@"modifyPlayerInfo:");
+    sqlite3_stmt *statement;
+    
+    if(sqlite3_open([self.databasePath UTF8String], &_dataBaseManager) == SQLITE_OK){
+
+        NSString *sql = @"UPDATE player SET plr_nm = ?, plr_pst = ?, plr_desc = ? WHERE plr_cd = ?";
+        
+        if(sqlite3_prepare_v2(self.dataBaseManager, [sql UTF8String], -1, &statement, NULL) == SQLITE_OK)
+        {
+            sqlite3_bind_text(statement, 1, [[playerInfo objectAtIndex:0] UTF8String], -1, SQLITE_TRANSIENT);       // player name
+            sqlite3_bind_text(statement, 2, [[playerInfo objectAtIndex:1] UTF8String], -1, SQLITE_TRANSIENT);       // player position
+            sqlite3_bind_text(statement, 3, [[playerInfo objectAtIndex:2] UTF8String], -1, SQLITE_TRANSIENT);       // player descrition
+            sqlite3_bind_text(statement, 4, [[playerInfo objectAtIndex:3] UTF8String], -1, SQLITE_TRANSIENT);       // player code
+            
+            if(sqlite3_step(statement) == SQLITE_DONE)
+            {
+                sqlite3_finalize(statement);
+                
+                return 1;
+            }
+        }else{
+            NSLog(@"error : %s", sqlite3_errmsg(self.dataBaseManager));
+        }
+    }
+    
+    sqlite3_finalize(statement);
+    sqlite3_close(self.dataBaseManager);
+    
+    return 0;
 }
 
 @end
